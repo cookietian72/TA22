@@ -4,6 +4,7 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-logo">
+          <img src="/logo.png" alt="AquaProtect Logo" class="logo" />
           <h2>AquaProtect</h2>
         </div>
         <div class="nav-menu" :class="{ active: mobileMenuOpen }">
@@ -184,6 +185,26 @@ const closeMobileMenu = () => {
   align-items: center;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.4)) brightness(1.1);
+}
+
 .nav-logo h2 {
   color: white;
   margin: 0;
@@ -232,7 +253,7 @@ const closeMobileMenu = () => {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #1e3c72 100%);
+  background: linear-gradient(135deg, #1976d2 0%, #42a5f5 30%, #00b4db 70%, #0083b0 100%);
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -292,7 +313,7 @@ const closeMobileMenu = () => {
 }
 
 .cta-button {
-  background: linear-gradient(45deg, #00b4db, #0083b0);
+  background: linear-gradient(45deg, #1976d2, #42a5f5);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -300,15 +321,18 @@ const closeMobileMenu = () => {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
+  box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
   position: relative;
   z-index: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .cta-button:hover {
-  background: linear-gradient(45deg, #0083b0, #00b4db);
+  background: linear-gradient(45deg, #42a5f5, #1976d2);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 180, 219, 0.4);
+  box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
 }
 
 /* Container */
@@ -321,7 +345,7 @@ const closeMobileMenu = () => {
 /* Target Section */
 .target-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #e3f2fd 0%, #f0f8ff 100%);
+  background: linear-gradient(180deg, #e3f2fd 0%, #f8f9ff 100%);
 }
 
 .target-section h2 {
@@ -536,6 +560,20 @@ const closeMobileMenu = () => {
   .nav-link {
     margin: 1rem 0;
     font-size: 1.2rem;
+  }
+
+  .nav-logo {
+    gap: 8px;
+  }
+
+  .logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+  }
+
+  .nav-logo h2 {
+    font-size: 1.5rem;
   }
 
   .hero-title {
