@@ -55,7 +55,7 @@
             </div>
             <div class="card-content">
               <div class="placeholder-content">
-                <p>Current weather data will be displayed here</p>
+                <p>Current weather data</p>
                 <div class="placeholder-box"></div>
               </div>
             </div>
