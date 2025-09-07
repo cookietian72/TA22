@@ -8,9 +8,9 @@
           <h2>AquaProtect</h2>
         </div>
         <div class="nav-menu" :class="{ active: mobileMenuOpen }">
-          <a href="#" class="nav-link" @click="closeMobileMenu">Home</a>
-          <a href="#" class="nav-link" @click="closeMobileMenu">Predictive Model</a>
-          <a href="#" class="nav-link" @click="closeMobileMenu">Education</a>
+          <router-link to="/" class="nav-link active" @click="closeMobileMenu">Home</router-link>
+          <router-link to="/predictive-model" class="nav-link" @click="closeMobileMenu">Predictive Model</router-link>
+          <router-link to="/education" class="nav-link" @click="closeMobileMenu">Education</router-link>
         </div>
         <div class="nav-toggle" @click="toggleMobileMenu">
           <span class="bar"></span>
@@ -28,7 +28,7 @@
         <p class="hero-description">
           Get real-time water quality updates and make informed decisions about beach safety after rainfall
         </p>
-        <button class="cta-button">Check Water Quality Now</button>
+        <router-link to="/predictive-model" class="cta-button">Check Water Quality Now</router-link>
       </div>
     </section>
 
@@ -327,6 +327,8 @@ const closeMobileMenu = () => {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .cta-button:hover {
