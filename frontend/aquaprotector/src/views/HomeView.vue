@@ -54,10 +54,11 @@
               <h3>🌤️ Weather Conditions</h3>
             </div>
             <div class="card-content">
-              <div class="placeholder-content">
-                <p>Current weather data</p>
-                <div class="placeholder-box"></div>
-              </div>
+              <WeatherWidget
+                api-key="a7f7e34d892b94d341f19b3252f8c992"
+                default-location="Dromana"
+                :auto-fetch="true"
+              />
             </div>
           </div>
           
@@ -66,10 +67,11 @@
               <h3>☀️ UV Index</h3>
             </div>
             <div class="card-content">
-              <div class="placeholder-content">
-                <p>UV index and sun safety information</p>
-                <div class="placeholder-box"></div>
-              </div>
+              <UVWidget
+                api-key="a7f7e34d892b94d341f19b3252f8c992"
+                default-location="Dromana"
+                :auto-fetch="true"
+              />
             </div>
           </div>
         </div>
@@ -148,6 +150,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import WeatherWidget from '../components/WeatherWidget.vue'
+import UVWidget from '../components/UVWidget.vue'
 
 const mobileMenuOpen = ref(false)
 
